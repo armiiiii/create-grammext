@@ -117,7 +117,7 @@
     "./src/**/*.ts"
   ],
   "exclude": [
-    "node_modules",
+    "templates/default/node_modules",
     "dist"
   ]
 }

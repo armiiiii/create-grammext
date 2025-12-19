@@ -1,45 +1,33 @@
 {
-  "name": "grammext",
-  "version": "0.1.0",
+  "name": "create-grammext",
+  "version": "0.1.1",
   "description": "🚀 The Next.js-inspired, batteries-included framework for building powerful Telegram bots with grammY. Featuring logging, testing, hot-reload, and best practices out of the box.",
   "keywords": [
     "telegram",
     "tg",
     "bot",
     "bots",
+    "grammy",
     "template",
+    "starter",
     "nodejs",
     "typescript",
-    "ts"
+    "ts",
+    "cli"
   ],
   "license": "ISC",
   "author": "Igor Glushko",
-  "type": "module",
+  "type": "commonjs",
   "main": "src/index.ts",
-  "scripts": {
-    "dev": "run-p dev:*",
-    "dev:build": "tsup src/index.ts --format cjs --out-dir dist --watch --silent",
-    "dev:run": "nodemon -q --watch dist --delay 500ms dist/index.cjs",
-    "dev:test": "jest --watchAll",
-    "test:unit": "jest tests/unit/*",
-    "test:integration": "jest tests/integration/*",
-    "prod:build": "tsup src/index.ts --format cjs --minify --out-dir dist",
-    "prod:start": "pm2 dist/index.cjs"
+  "bin": {
+    "create-grammext": "./index.js"
   },
-  "dependencies": {
-    "grammy": "^1.38.4",
-    "pm2": "^6.0.14",
-    "winston": "^3.19.0"
-  },
-  "devDependencies": {
-    "@types/jest": "^30.0.0",
-    "@types/node": "^25.0.2",
-    "@types/winston": "^2.4.4",
-    "jest": "^30.2.0",
-    "nodemon": "^3.1.11",
-    "npm-run-all": "^4.1.5",
-    "ts-jest": "^29.4.6",
-    "tsup": "^8.5.1",
-    "typescript": "^5.9.3"
+  "files": [
+    "templates",
+    "index.js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/armiiiii/create-grammext"
   }
 }
