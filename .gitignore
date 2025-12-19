@@ -1,0 +1,14 @@
+# deps
+node_modules
+
+#logs
+logs*
+*.log
+
+# env variables
+.env
+.env*
+src/config.ts
+
+# build
+dist
